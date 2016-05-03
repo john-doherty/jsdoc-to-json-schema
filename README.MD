@@ -103,7 +103,7 @@ function Product(){
  * @schema.type array
  * @schema.minItems 3
  * @schema.maxItems 6
- * @schema.require true
+ * @schema.required true
  */
 Product.prototype.types = function(){
     
@@ -121,7 +121,7 @@ Product.prototype.types = function(){
             "type": "array",
             "minItems": 3,
             "maxItems": 6,
-            "require": "true"
+            "required": true
         }
     }   
 }
@@ -269,6 +269,7 @@ TODO: Add content
 
 ## Outstanding tasks
 
+ * Add options (i.e. strict mode, allowing only schema v3 tags)
  * Add glob support
  * Add unit tests
  * Add pipe support
