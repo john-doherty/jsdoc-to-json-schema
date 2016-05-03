@@ -10,7 +10,7 @@ function Product(){
  * @schema.type array
  * @schema.minItems 3
  * @schema.maxItems 6
- * @schema.require true
+ * @schema.required true
  */
 Product.prototype.types = function(){
     
