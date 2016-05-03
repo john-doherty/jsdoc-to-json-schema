@@ -1,0 +1,12 @@
+{
+    "name": "Product",
+    "description": "An example product marked up with json schema comments",
+    "properties": {
+        "types": {
+            "type": "array",
+            "minItems": 3,
+            "maxItems": 6,
+            "require": "true"
+        }
+    }   
+}

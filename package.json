@@ -1,0 +1,25 @@
+{
+  "name": "jsdoc-to-json-schema",
+  "version": "0.0.1",
+  "description": "Generate JSON Schema from JavaScript/JSON objects using JSDoc style comments.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/john-doherty/jsdoc-to-json-schema.git"
+  },
+  "author": "John Doherty <contact@johndoherty.info> (www.johndoherty.info)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/john-doherty/jsdoc-to-json-schema/issues"
+  },
+  "homepage": "https://github.com/john-doherty/jsdoc-to-json-schema#readme",
+  "devDependencies": {},
+  "dependencies": {
+    "commander": "^2.9.0",
+    "fs-extra-promise": "^0.3.1",
+    "jsdoc-parse": "^1.2.7"
+  }
+}
