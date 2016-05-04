@@ -171,8 +171,8 @@ The following [JSON Schema v3](https://tools.ietf.org/html/draft-zyp-json-schema
 
 **Note:** @schema tags without an associated value will be ignored.
 
-| Tag                        | type
-| -------------------------- | -----------
+| Tag                        | Type
+| -------------------------- | ---------
 | `@schema.name`             | string
 | `@schema.description`      | string
 | `@schema.extends`          | string
