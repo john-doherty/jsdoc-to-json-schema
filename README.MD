@@ -1,8 +1,7 @@
 # jsdoc-to-json-schema
 
-Generate JSON Schema from JavaScript/JSON objects using JSDoc style comments.
+Generate JSON Schema objects from JavaScript comments using jsDoc @schema tags.
 
-***NOTE:*** Early release, tests and documentation will be added shortly. Feel free to contribute/rise bugs.
 
 ## Installation
 
@@ -10,9 +9,43 @@ Generate JSON Schema from JavaScript/JSON objects using JSDoc style comments.
 npm install jsdoc-to-json-schema --save
 ```
 
-## Input *(singleton)*
+## Usage
 
-JavaScript or JSON file containing **@schema.** tags used to represent the desired JSON schema.
+As a node module
+
+```js
+var toJsonSchema = require('jsdoc-to-json-schema');
+
+// generate a JSON schema for product.js
+toJsonSchema('./example/product.js', './example/product.schema.json');
+```
+
+Via the command line
+
+```
+$ jsdoc-to-json-schema -i ./example/product.js -o ./example/product.schema.json
+```
+
+As an express response
+
+```js
+var app = require('express')(),
+    toJsonSchema = require('../lib/jsdoc-to-json-schema.js');
+
+app.get('/', function(req, res){
+    
+    // return JSON schema generated from person.js script comments
+    toJsonSchema('./examples/person.js', res);
+});
+    
+app.listen(8080, function(){
+    console.log('Example app listening on port 8080');
+});
+```
+
+### Input *(singleton)*
+
+JavaScript file containing jsDoc *@schema* tags used to specify the JSON schema output.
 
 ```js
 /**
@@ -53,7 +86,7 @@ var Person = {
 };
 ```
 
-## Output
+### Output
 
 ```js
 {
@@ -89,7 +122,10 @@ var Person = {
 }
 ```
 
-## Input *(Instance)*
+### Input *(instance)*
+
+JavaScript file containing jsDoc *@schema* tags used to specify the JSON schema output.
+
 ```js
 /**
  * @schema.name Product
@@ -110,7 +146,7 @@ Product.prototype.types = function(){
 }
 ```
 
-## Output
+### Output
 
 ```js
 {
@@ -127,142 +163,130 @@ Product.prototype.types = function(){
 }
 ```
 
-## Usage
 
-As a node.js module
-
-```js
-var jsDocToJsonSchema = require('jsdoc-to-json-schema');
-
-jsDocToJsonSchema('./example/product.js', './example/product.schema.json');
-```
-
-Via the command line
-
-```
-$ jsdoc-to-json-schema -i ./example/product.js -o ./example/product.schema.json
-```
 
 ## Supported JSON Schema tags
 
-The following JSON Schema v3 tags are supported
+The following [JSON Schema v3](https://tools.ietf.org/html/draft-zyp-json-schema-03) tags are supported:
 
-### @schema.name
+**NOTE** Undocumented *@schema* tags will also be rendered to aid extensibility
 
-TODO: Add content
-
-
-### @schema.extends
+**@schema.name**
 
 TODO: Add content
 
 
-### @schema.id
+**@schema.extends**
 
 TODO: Add content
 
 
-### @schema.type
+**@schema.id**
 
 TODO: Add content
 
 
-### @schema.pattern
+**@schema.type**
 
 TODO: Add content
 
 
-### @schema.title
+**@schema.pattern**
 
 TODO: Add content
 
 
-### @schema.format
+**@schema.title**
 
 TODO: Add content
 
 
-### @schema.disallow
+**@schema.format**
 
 TODO: Add content
 
 
-### @schema.extends
+**@schema.disallow**
 
 TODO: Add content
 
 
-### @schema.enum
+**@schema.extends**
 
 TODO: Add content
 
 
-### @schema.description
+**@schema.enum**
 
 TODO: Add content
 
 
-### @schema.name
+**@schema.description**
 
 TODO: Add content
 
 
-### @schema.minimum
+**@schema.name**
 
 TODO: Add content
 
 
-### @schema.maximum
+**@schema.minimum**
 
 TODO: Add content
 
 
-### @schema.minItems
+**@schema.maximum**
 
 TODO: Add content
 
 
-### @schema.maxItems
+**@schema.minItems**
 
 TODO: Add content
 
 
-### @schema.minLength
+**@schema.maxItems**
 
 TODO: Add content
 
 
-### @schema.maxLength
+**@schema.minLength**
 
 TODO: Add content
 
 
-### @schema.exclusiveMinimum
+**@schema.maxLength**
 
 TODO: Add content
 
 
-### @schema.exclusiveMaximum
+**@schema.exclusiveMinimum**
 
 TODO: Add content
 
 
-### @schema.divisibleBy
+**@schema.exclusiveMaximum**
 
 TODO: Add content
 
 
-### @schema.required
+**@schema.divisibleBy**
 
 TODO: Add content
 
 
-### @schema.uniqueItems
+**@schema.required**
 
 TODO: Add content
 
 
-### @schema.default
+**@schema.uniqueItems**
+
+TODO: Add content
+
+
+**@schema.default**
 
 TODO: Add content
 
@@ -272,7 +296,6 @@ TODO: Add content
  * Add options (i.e. strict mode, allowing only schema v3 tags)
  * Add glob support
  * Add unit tests
- * Add pipe support
 
 ## License
 
