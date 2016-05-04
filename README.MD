@@ -167,135 +167,39 @@ Product.prototype.types = function(){
 
 ## Supported JSON Schema tags
 
-The following [JSON Schema v3](https://tools.ietf.org/html/draft-zyp-json-schema-03) tags are supported:
-
-**NOTE** Undocumented *@schema* tags will also be rendered to aid extensibility
-
-**@schema.name**
-
-TODO: Add content
-
-
-**@schema.extends**
-
-TODO: Add content
-
-
-**@schema.id**
-
-TODO: Add content
-
-
-**@schema.type**
-
-TODO: Add content
-
-
-**@schema.pattern**
-
-TODO: Add content
-
-
-**@schema.title**
-
-TODO: Add content
-
-
-**@schema.format**
-
-TODO: Add content
-
-
-**@schema.disallow**
-
-TODO: Add content
-
-
-**@schema.extends**
-
-TODO: Add content
-
-
-**@schema.enum**
-
-TODO: Add content
-
-
-**@schema.description**
-
-TODO: Add content
-
-
-**@schema.name**
-
-TODO: Add content
-
-
-**@schema.minimum**
-
-TODO: Add content
-
-
-**@schema.maximum**
-
-TODO: Add content
-
-
-**@schema.minItems**
-
-TODO: Add content
-
-
-**@schema.maxItems**
-
-TODO: Add content
-
-
-**@schema.minLength**
-
-TODO: Add content
-
-
-**@schema.maxLength**
-
-TODO: Add content
-
-
-**@schema.exclusiveMinimum**
-
-TODO: Add content
-
-
-**@schema.exclusiveMaximum**
-
-TODO: Add content
-
-
-**@schema.divisibleBy**
-
-TODO: Add content
-
-
-**@schema.required**
-
-TODO: Add content
-
-
-**@schema.uniqueItems**
-
-TODO: Add content
-
-
-**@schema.default**
-
-TODO: Add content
-
-
-## Outstanding tasks
-
- * Add options (i.e. strict mode, allowing only schema v3 tags)
- * Add glob support
- * Add unit tests
+The following [JSON Schema v3](https://tools.ietf.org/html/draft-zyp-json-schema-03) tags are supported. Undocumented *@schema* tags will also be generated in order to aid extensibility.
+
+| Tag                        | type
+| -------------------------- | -----------
+| `@schema.name`             | string
+| `@schema.description`      | string
+| `@schema.extends`          | string
+| `@schema.id`               | string
+| `@schema.type`             | string
+| `@schema.pattern`          | string
+| `@schema.title`            | string
+| `@schema.format`           | string
+| `@schema.disallow`         | string
+| `@schema.enum`             | array
+| `@schema.minimum`          | integer
+| `@schema.maximum`          | integer
+| `@schema.minItems`         | integer
+| `@schema.maxItems`         | integer
+| `@schema.minLength`        | integer
+| `@schema.maxLength`        | integer
+| `@schema.exclusiveMinimum` | integer
+| `@schema.exclusiveMaximum` | integer
+| `@schema.divisibleBy`      | integer
+| `@schema.required`         | boolean
+| `@schema.uniqueItems`      | boolean
+| `@schema.default`          | any
+
+
+## TODO
+
+ 1. Add unit tests
+ 2. Add options (i.e. strict mode, ignoring none schema defined tags)
+ 3. Add glob support
 
 ## License
 

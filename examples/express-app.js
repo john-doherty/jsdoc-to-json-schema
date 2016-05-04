@@ -1,8 +1,9 @@
 var app = require('express')(),
     toJsonSchema = require('../lib/jsdoc-to-json-schema.js');
 
-// request this route to get a JSON schema from person.js
 app.get('/', function(req, res){
+    
+    // return JSON schema generated from person.js script comments
     toJsonSchema('./examples/person.js', res);
 });
     

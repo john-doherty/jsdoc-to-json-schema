@@ -1,6 +1,6 @@
 {
   "name": "jsdoc-to-json-schema",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Generate JSON Schema objects from JavaScript comments using jsDoc @schema tags.",
   "main": "index.js",
   "scripts": {
@@ -12,7 +12,10 @@
   },
   "keywords": [
     "jsdoc",
-    "json schema",
+    "json",
+    "schema",
+    "json-schema",
+    "schema",
     "comments"
   ],
   "author": "John Doherty <contact@johndoherty.info> (www.johndoherty.info)",
