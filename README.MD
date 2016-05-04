@@ -43,6 +43,8 @@ app.listen(8080, function(){
 });
 ```
 
+For use with express consider the dedicated express middleware project [express-json-schema](https://github.com/john-doherty/express-json-schema)
+
 ### Input *(singleton)*
 
 JavaScript file containing jsDoc *@schema* tags used to specify the JSON schema output.
