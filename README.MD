@@ -167,7 +167,9 @@ Product.prototype.types = function(){
 
 ## Supported JSON Schema tags
 
-The following [JSON Schema v3](https://tools.ietf.org/html/draft-zyp-json-schema-03) tags are supported. Undocumented *@schema* tags will also be generated in order to aid extensibility.
+The following [JSON Schema v3](https://tools.ietf.org/html/draft-zyp-json-schema-03) tags are supported, however undocumented *@schema* tags will also be generated in order to aid extensibility.
+
+**Note:** @schema tags without an associated value will be ignored.
 
 | Tag                        | type
 | -------------------------- | -----------
