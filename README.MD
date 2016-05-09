@@ -1,4 +1,4 @@
-![stats](https://nodei.co/npm/express-render-template.png?downloads=true)
+![stats](https://nodei.co/npm/jsdoc-to-json-schema.png?downloads=true)
 
 # jsdoc-to-json-schema
 
