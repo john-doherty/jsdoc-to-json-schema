@@ -1,3 +1,5 @@
+![stats](https://nodei.co/npm/express-render-template.png?downloads=true)
+
 # jsdoc-to-json-schema
 
 Generate JSON Schema objects from JavaScript comments using jsDoc @schema tags.
