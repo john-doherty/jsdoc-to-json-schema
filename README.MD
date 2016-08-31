@@ -209,4 +209,4 @@ The following [JSON Schema v3](https://tools.ietf.org/html/draft-zyp-json-schema
 
 ## License
 
-[ISC License](LICENSE) &copy; 2016 [John Doherty](http://wwww.johndoherty.info/)
+[ISC License](LICENSE) &copy; 2016 [John Doherty](https://courseof.life/johndoherty)
