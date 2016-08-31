@@ -1,6 +1,6 @@
 {
   "name": "jsdoc-to-json-schema",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Generate JSON Schema from jsDoc comments.",
   "main": "index.js",
   "scripts": {
