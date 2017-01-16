@@ -1,9 +1,7 @@
-![stats](https://nodei.co/npm/jsdoc-to-json-schema.png?downloads=true)
-
 # jsdoc-to-json-schema
+[![npm](https://img.shields.io/npm/dt/jsdoc-to-json-schema.svg)](https://www.npmjs.com/package/jsdoc-to-json-schema) [![Linked In](https://img.shields.io/badge/Linked-In-blue.svg)](https://www.linkedin.com/in/john-i-doherty) [![Twitter Follow](https://img.shields.io/twitter/follow/CambridgeMVP.svg?style=social&label=Twitter&style=plastic)](https://twitter.com/CambridgeMVP)
 
-Generate JSON Schema objects from JavaScript comments using jsDoc @schema tags.
-
+Generate JSON schemas from JavaScript comments using a new jsDoc *@schema* tag.
 
 ## Installation
 
