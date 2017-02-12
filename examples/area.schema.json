@@ -1,0 +1,44 @@
+{
+    "properties": {
+        "id": {
+            "title": "Name",
+            "description": "Please enter your full name",
+            "type": "string",
+            "maxLength": 30,
+            "minLength": 1
+        },
+        "name": {
+            "type": "string",
+            "required": true
+        },
+        "osmId": {
+            "type": "string",
+            "required": true
+        },
+        "polygon": {
+            "type": "object",
+            "required": true
+        },
+        "$reql_type$": {
+            "type": "string",
+            "required": true
+        },
+        "coordinates": {
+            "type": "array",
+            "required": true
+        },
+        "type": {
+            "type": "string",
+            "required": true
+        },
+        "simc": {
+            "type": "string",
+            "required": true
+        },
+        "terc": {
+            "type": "string",
+            "required": true
+        }
+    },
+    "name": "Area"
+}

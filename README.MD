@@ -20,24 +20,24 @@ var toJsonSchema = require('jsdoc-to-json-schema');
 toJsonSchema('./example/product.js', './example/product.schema.json');
 ```
 
-Via the command line
+via the command line
 
 ```
 $ jsdoc-to-json-schema -i ./example/product.js -o ./example/product.schema.json
 ```
 
-As an express response
+as an express response
 
 ```js
 var app = require('express')(),
     toJsonSchema = require('../lib/jsdoc-to-json-schema.js');
 
 app.get('/', function(req, res){
-    
+
     // return JSON schema generated from person.js script comments
     toJsonSchema('./examples/person.js', res);
 });
-    
+
 app.listen(8080, function(){
     console.log('Example app listening on port 8080');
 });
@@ -55,7 +55,7 @@ JavaScript file containing jsDoc *@schema* tags used to specify the JSON schema 
  * @schema.description This is an example Person object marked up with JSON schema tags to allow schema generation
  */
 var Person = {
-    
+
     /**
      * @schema.title Name
      * @schema.description Please enter your full name
@@ -65,13 +65,13 @@ var Person = {
      * @schema.required true
      */
     name: '',
-    
+
     /**
      * @schema.title Job Title
      * @schema.type string
      */
     jobTitle: '',
-    
+
     /**
      * @schema.title Telephone Number
      * @schema.description Please enter telephone number including country code
@@ -79,7 +79,7 @@ var Person = {
      * @schema.required true
      */
     telephone: '',
-    
+
     /**
      * @schema.type string
      * @schema.required true
@@ -134,7 +134,7 @@ JavaScript file containing jsDoc *@schema* tags used to specify the JSON schema 
  * @schema.description An example product marked up with json schema comments
  */
 function Product(){
-    
+
 }
 
 /**
@@ -144,7 +144,7 @@ function Product(){
  * @schema.required true
  */
 Product.prototype.types = function(){
-    
+
 }
 ```
 
@@ -161,7 +161,7 @@ Product.prototype.types = function(){
             "maxItems": 6,
             "required": true
         }
-    }   
+    }
 }
 ```
 
@@ -207,4 +207,4 @@ The following [JSON Schema v3](https://tools.ietf.org/html/draft-zyp-json-schema
 
 ## License
 
-[ISC License](LICENSE) &copy; 2016 [John Doherty](https://courseof.life/johndoherty)
+[ISC License](LICENSE) &copy; 2016 [John Doherty](https://twitter.com/CambridgeMVP)
