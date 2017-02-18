@@ -34,15 +34,18 @@ $ jsdoc-to-json-schema -i ./example/product.js -o ./example/product.schema.json
 ### Using this module as an expressjs response
 
 ```js
-var app = require('express')(),
-    toJsonSchema = require('../lib/jsdoc-to-json-schema.js');
+var express = require('express');
+var app = express();
+var toJsonSchema = require('../lib/jsdoc-to-json-schema.js');
 
+// create an express route
 app.get('/', function(req, res){
 
     // return JSON schema generated from person.js script comments
     toJsonSchema('./examples/person.js', res);
 });
 
+// start the server listening on port 8080
 app.listen(8080, function(){
     console.log('Example app listening on port 8080');
 });

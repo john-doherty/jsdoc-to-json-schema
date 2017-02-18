@@ -3,7 +3,7 @@
  * @schema.description This is an example Person object marked up with JSON schema tags to allow schema generation
  */
 var Person = {
-    
+
     /**
      * @schema.title Name
      * @schema.description Please enter your full name
@@ -13,13 +13,13 @@ var Person = {
      * @schema.required true
      */
     name: '',
-    
+
     /**
      * @schema.title Job Title
      * @schema.type string
      */
     jobTitle: '',
-    
+
     /**
      * @schema.title Telephone Number
      * @schema.description Please enter telephone number including country code
@@ -27,7 +27,7 @@ var Person = {
      * @schema.required true
      */
     telephone: '',
-    
+
     /**
      * @schema.type string
      * @schema.required true
@@ -38,6 +38,6 @@ var Person = {
      * @schema.type object
      */
     address: {
-        
+
     }
 };

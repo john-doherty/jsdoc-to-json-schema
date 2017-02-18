@@ -2,8 +2,8 @@
  * @schema.name Product
  * @schema.description An example product marked up with json schema comments
  */
-function Product(){
-    
+function Product() {
+
 }
 
 /**
@@ -12,6 +12,6 @@ function Product(){
  * @schema.maxItems 6
  * @schema.required true
  */
-Product.prototype.types = function(){
-    
+Product.prototype.types = function() {
+
 }

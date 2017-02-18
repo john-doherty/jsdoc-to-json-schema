@@ -44,7 +44,7 @@ var Area = {
          * @schema.type string
          * @schema.required true
          */
-        $reql_type$: "GEOMETRY",
+        $reql_type$: 'GEOMETRY',
 
         /**
          * @schema.type array
@@ -56,7 +56,7 @@ var Area = {
          * @schema.type string
          * @schema.required true
          */
-        type: "Polygon"
+        type: 'Polygon'
     },
 
     /**
@@ -70,4 +70,4 @@ var Area = {
      * @schema.required true
      */
     terc: ''
-}
+};
