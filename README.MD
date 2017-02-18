@@ -12,7 +12,7 @@ npm install --save jsdoc-to-json-schema
 
 ## Example
 
-Using jsdoc-to-json-schema as a node module:
+### Using this module within your node project
 
 ```js
 var toJsonSchema = require('jsdoc-to-json-schema');
@@ -21,13 +21,17 @@ var toJsonSchema = require('jsdoc-to-json-schema');
 toJsonSchema('./example/product.js', './example/product.schema.json');
 ```
 
-Using jsdoc-to-json-schema via the command line:
+### Using this module via the command line
 
-```
+```bash
+# install the module globally
+$ npm install -g jsdoc-to-json-schema
+
+# execute from command line passing input and output paths
 $ jsdoc-to-json-schema -i ./example/product.js -o ./example/product.schema.json
 ```
 
-as an express response
+### Using this module as an expressjs response
 
 ```js
 var app = require('express')(),
