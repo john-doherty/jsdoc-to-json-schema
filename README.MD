@@ -1,4 +1,5 @@
 # jsdoc-to-json-schema
+
 [![npm](https://img.shields.io/npm/dt/jsdoc-to-json-schema.svg)](https://www.npmjs.com/package/jsdoc-to-json-schema) [![Linked In](https://img.shields.io/badge/Linked-In-blue.svg)](https://www.linkedin.com/in/john-i-doherty) [![Twitter Follow](https://img.shields.io/twitter/follow/CambridgeMVP.svg?style=social&label=Twitter&style=plastic)](https://twitter.com/CambridgeMVP)
 
 Generate JSON schemas from JavaScript comments using a new jsDoc *@schema* tag.
@@ -6,12 +7,12 @@ Generate JSON schemas from JavaScript comments using a new jsDoc *@schema* tag.
 ## Installation
 
 ```js
-npm install jsdoc-to-json-schema --save
+npm install --save jsdoc-to-json-schema
 ```
 
-## Usage
+## Example
 
-As a node module
+Using jsdoc-to-json-schema as a node module:
 
 ```js
 var toJsonSchema = require('jsdoc-to-json-schema');
@@ -20,7 +21,7 @@ var toJsonSchema = require('jsdoc-to-json-schema');
 toJsonSchema('./example/product.js', './example/product.schema.json');
 ```
 
-via the command line
+Using jsdoc-to-json-schema via the command line:
 
 ```
 $ jsdoc-to-json-schema -i ./example/product.js -o ./example/product.schema.json
@@ -207,4 +208,4 @@ The following [JSON Schema v3](https://tools.ietf.org/html/draft-zyp-json-schema
 
 ## License
 
-[ISC License](LICENSE) &copy; 2016 [John Doherty](https://twitter.com/CambridgeMVP)
+Licensed under [ISC License](LICENSE) &copy; [John Doherty](http://www.johndoherty.info)
