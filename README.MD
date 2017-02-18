@@ -17,8 +17,18 @@ npm install --save jsdoc-to-json-schema
 ```js
 var toJsonSchema = require('jsdoc-to-json-schema');
 
-// generate a JSON schema for product.js
+// OPTION 1: generate a JSON schema for product.js and save it to disk
 toJsonSchema('./example/product.js', './example/product.schema.json');
+
+// OPTION 2: generate a JSON schema and return it as an object
+toJsonSchema('./example/product.js').then(function(schema){
+    // do something with it
+});
+
+// OPTION 3: generate a JSON schema, save it to disk and return it as an object
+toJsonSchema('./example/product.js', './example/product.schema.json').then(function(schema){
+    // do something with it
+});
 ```
 
 ### Using this module via the command line
@@ -41,7 +51,7 @@ var toJsonSchema = require('../lib/jsdoc-to-json-schema.js');
 // create an express route
 app.get('/', function(req, res){
 
-    // return JSON schema generated from person.js script comments
+    // pipe schema directly to the response stream
     toJsonSchema('./examples/person.js', res);
 });
 
@@ -55,7 +65,7 @@ For use with express consider the dedicated express middleware project [express-
 
 ### Input *(singleton)*
 
-JavaScript file containing jsDoc *@schema* tags used to specify the JSON schema output.
+JavaScript file containing jsDoc @schema tags used to define the JSON schema:
 
 ```js
 /**
@@ -134,7 +144,7 @@ var Person = {
 
 ### Input *(instance)*
 
-JavaScript file containing jsDoc *@schema* tags used to specify the JSON schema output.
+JavaScript file containing jsDoc @schema tags used to define the JSON schema:
 
 ```js
 /**
