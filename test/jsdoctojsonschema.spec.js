@@ -13,7 +13,6 @@ describe('jsdoc-to-json-schema', function () {
 
         var inputFile = path.resolve('./test/data/test-singleton.js');
 
-        // generate a JSON schema for product.js
         toJsonSchema(inputFile).then(function(schema){
 
             expect(schema).toBeDefined();
@@ -48,6 +47,33 @@ describe('jsdoc-to-json-schema', function () {
             expect(schema.properties.price.description).toEqual('Price of the product');
             expect(schema.properties.price.minimum).toEqual(0);
             expect(schema.properties.price.required).toEqual(true);
+
+            done();
+        })
+        .catch(function(err){
+            done(err);
+        });
+    });
+
+    it('should return JSON Schema for JS instance', function (done) {
+
+        var inputFile = path.resolve('./test/data/test-instance.js');
+
+        toJsonSchema(inputFile).then(function(schema){
+
+            expect(schema).toBeDefined();
+
+            // top level
+            expect(schema.name).toEqual('Product');
+            expect(schema.description).toEqual('An example product marked up with json schema comments');
+            expect(schema.properties).toBeDefined();
+
+            // .name property
+            expect(schema.properties.attributes).toBeDefined();
+            expect(schema.properties.attributes.type).toEqual('array');
+            expect(schema.properties.attributes.minItems).toEqual(3);
+            expect(schema.properties.attributes.maxItems).toEqual(6);
+            expect(schema.properties.attributes.required).toEqual(true);
 
             done();
         })
