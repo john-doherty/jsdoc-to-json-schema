@@ -206,6 +206,14 @@ The following [JSON Schema v3](https://tools.ietf.org/html/draft-zyp-json-schema
 | `@schema.uniqueItems`      | boolean
 | `@schema.default`          | any
 
+## Running tests
+
+Install dev dependencies and run tests:
+
+```
+$ npm install -d && npm test
+```
+
 ## License
 
 Licensed under [ISC License](LICENSE) &copy; [John Doherty](http://www.johndoherty.info)
