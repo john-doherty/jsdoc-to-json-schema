@@ -1,6 +1,6 @@
 # jsdoc-to-json-schema
 
-[![Shippable branch](https://img.shields.io/shippable/5818b23cd68ac10e0020bf2b/master.svg)](https://app.shippable.com/projects/5818b23cd68ac10e0020bf2b) [![npm](https://img.shields.io/npm/dt/jsdoc-to-json-schema.svg)](https://www.npmjs.com/package/jsdoc-to-json-schema) [![Linked In](https://img.shields.io/badge/Linked-In-blue.svg)](https://www.linkedin.com/in/john-i-doherty) [![Twitter Follow](https://img.shields.io/twitter/follow/CambridgeMVP.svg?style=social&label=Twitter&style=plastic)](https://twitter.com/CambridgeMVP)
+[![Shippable branch](https://img.shields.io/shippable/5818b23cd68ac10e0020bf2b/master.svg)](https://app.shippable.com/projects/5818b23cd68ac10e0020bf2b) [![npm](https://img.shields.io/npm/dt/jsdoc-to-json-schema.svg)](https://www.npmjs.com/package/jsdoc-to-json-schema) [![Linked In](https://img.shields.io/badge/Linked-In-blue.svg)](https://www.linkedin.com/in/john-i-doherty) [![Twitter Follow](https://img.shields.io/twitter/follow/MrJohnDoherty.svg?style=social&label=Twitter&style=plastic)](https://twitter.com/MrJohnDoherty)
 
 Generate JSON schemas from JavaScript code comments using a new jsDoc [@schema](#input-singleton) tag.
 
