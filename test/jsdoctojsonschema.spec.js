@@ -48,6 +48,16 @@ describe('jsdoc-to-json-schema', function () {
             expect(schema.properties.price.minimum).toEqual(0);
             expect(schema.properties.price.required).toEqual(true);
 
+            // .skus property
+            expect(schema.properties.skus).toBeDefined();
+            expect(schema.properties.skus.type).toEqual('array');
+            expect(schema.properties.skus.title).toEqual('SKUs');
+            expect(schema.properties.skus.description).toEqual('SKUs of the product');
+            expect(schema.properties.skus.minItems).toEqual(1);
+            expect(schema.properties.skus.items).toEqual('[integer]');
+            expect(schema.properties.skus.default).toEqual([42, 'anothersku']);
+            expect(schema.properties.skus.required).toEqual(true);
+
             done();
         })
         .catch(function(err){
