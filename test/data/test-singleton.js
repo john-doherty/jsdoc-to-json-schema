@@ -31,5 +31,16 @@ var product = {
      * @schema.minimum 0
      * @schema.required true
      */
-    price: ''
+    price: '',
+
+   /**
+    * @schema.title SKUs
+    * @schema.description SKUs of the product
+    * @schema.type array
+    * @schema.minItems 1
+    * @schema.items [integer]
+    * @schema.default [42, "anothersku"]
+    * @schema.required true
+    */
+    skus: []
 };
